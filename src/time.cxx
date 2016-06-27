@@ -4,16 +4,16 @@
 
 namespace etutils {
 
-int64_t up_time() {
+uint64_t up_time() {
 	struct timespec tv;
     clock_gettime(CLOCK_MONOTONIC,&tv);
-    return (int64_t) (tv.tv_sec * 1000L + tv.tv_nsec / 1000000L);
+    return (uint64_t) (tv.tv_sec * 1000UL + tv.tv_nsec / 1000000UL);
 }
 
-int64_t clock_time() {
+uint64_t clock_time() {
 	struct timeval tv;
 	gettimeofday(&tv,nullptr);
-	return (int64_t)(tv.tv_sec * 1000L + tv.tv_usec / 1000L);
+	return (uint64_t)(tv.tv_sec * 1000UL + tv.tv_usec / 1000UL);
 }
 
 }

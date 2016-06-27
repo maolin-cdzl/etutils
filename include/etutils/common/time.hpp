@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 namespace etutils {
-	int64_t up_time();
-	int64_t clock_time();
+	uint64_t up_time();
+	uint64_t clock_time();
 }
 
